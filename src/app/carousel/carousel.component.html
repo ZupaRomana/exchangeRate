@@ -1,0 +1,7 @@
+<p *ngIf="(carouselItem | async) as carouselItem"
+   [style.background-image]="'url(' + carouselItem.backgroundUrl + ')'"
+   class="carousel mat-h1">
+  {{ 1 | currency:carouselItem.base:'code' }}
+  =
+  {{ carouselItem.rate | currency:carouselItem.to:'code' }}
+</p>
