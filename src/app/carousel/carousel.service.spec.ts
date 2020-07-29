@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ApiService } from './api.service';
+import { CarouselService } from './carousel.service';
 
-describe('ExchangeRateService', () => {
-  let service: ApiService;
+describe('CarouselService', () => {
+  let service: CarouselService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ApiService);
+    service = TestBed.inject(CarouselService);
   });
 
   it('should be created', () => {

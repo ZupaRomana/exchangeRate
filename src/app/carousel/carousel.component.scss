@@ -1,0 +1,15 @@
+.carousel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  width: fit-content;
+  max-width: 410px;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 410px;
+  justify-content: space-around;
+}

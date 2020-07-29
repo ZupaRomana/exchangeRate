@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ExchangeRateService} from './services/exchange-rate.service';
+import {ApiService} from './services/api.service';
 import {Observable} from 'rxjs';
 import {ExchangeRate} from './models/exchangeRate';
 
@@ -9,11 +9,11 @@ import {ExchangeRate} from './models/exchangeRate';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  rate: Observable<ExchangeRate>;
-  constructor(private exchangeRateService: ExchangeRateService) {
+  rate$: Observable<ExchangeRate>;
+  constructor(private apiService: ApiService) {
   }
 
   ngOnInit(): void {
-    this.rate = this.exchangeRateService.getExchangeRate({base: 'EUR', to: 'PLN'});
+    this.rate$ = this.apiService.getExchangeRate$({base: 'EUR', to: 'PLN'});
   }
 }

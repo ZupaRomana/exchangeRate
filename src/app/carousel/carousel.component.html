@@ -1,0 +1,11 @@
+<p *ngIf="(carouselItem$ | async) as carouselItem"
+   [style.background-image]="'url(' + carouselItem.backgroundUrl + ')'"
+   class="carousel mat-h1">
+  {{ 1 | currency:carouselItem.base:'code' }}
+  =
+  {{ carouselItem.rate | currency:carouselItem.to:'code' }}
+</p>
+<div class="wrapper">
+  <button mat-raised-button class="mat-primary" (click)="setItem('previous')"><</button>
+  <button mat-raised-button class="mat-primary" (click)="setItem('next')">></button>
+</div>
