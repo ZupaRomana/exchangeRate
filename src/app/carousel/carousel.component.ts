@@ -17,4 +17,7 @@ export class CarouselComponent implements OnInit {
     this.carouselItem = this.carouselService.getCarouselItem();
   }
 
+  setItem(order: 'next' | 'previous'): void {
+    this.carouselService.emitItem(order);
+  }
 }
