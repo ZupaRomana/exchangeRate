@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {ExchangeRate} from '../models/exchangeRate';
-import {ApiService} from '../services/api.service';
+import {ExchangeRate} from '../../shared/models/exchangeRate';
+import {ApiService} from '../../shared/services/api.service';
 
 @Component({
   selector: 'app-home',

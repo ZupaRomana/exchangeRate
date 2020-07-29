@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {CarouselService} from './carousel.service';
-import {CarouselItem} from '../models/carouselItem';
+import {CarouselService} from './helpers/carousel.service';
+import {CarouselItem} from '../../shared/models/carouselItem';
 
 @Component({
   selector: 'app-carousel',
