@@ -14,7 +14,6 @@ import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './components/home/home.component';
-import { ChartComponent } from './chart-module/chart/chart.component';
 
 @NgModule({
   declarations: [
