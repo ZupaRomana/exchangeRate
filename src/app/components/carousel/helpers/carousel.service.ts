@@ -1,11 +1,11 @@
 import {Injectable, OnDestroy} from '@angular/core';
-import {ExchangeRate} from '../models/exchangeRate';
+import {ExchangeRate} from '../../../shared/models/exchangeRate';
 import {BehaviorSubject, Observable, Subject} from 'rxjs';
-import {currenciesCarouselItems} from '../../config/config';
-import {ApiService} from '../services/api.service';
+import {currenciesCarouselItems} from '../../../../config/config';
+import {ApiService} from '../../../shared/services/api.service';
 import {takeUntil, tap} from 'rxjs/operators';
-import {CarouselItem} from '../models/carouselItem';
-import {getDimensions} from '../utils/utils';
+import {CarouselItem} from '../../../shared/models/carouselItem';
+import {getDimensions} from '../../../shared/utils/utils';
 
 @Injectable({
   providedIn: 'root'

@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from '../../services/api.service';
+import {ApiService} from '../../shared/services/api.service';
 import {Observable} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
-import {Currencies} from '../../models/currencies';
-import {Result} from '../../models/result';
+import {Currencies} from '../../shared/models/currencies';
+import {Result} from '../../shared/models/result';
 import {map} from 'rxjs/operators';
-import {Chunk} from '../../models/chunk';
-import {ChartData} from '../../models/chartData';
+import {Chunk} from '../../shared/models/chunk';
+import {ChartData} from '../../shared/models/chartData';
 
 @Component({
   selector: 'app-chart',
