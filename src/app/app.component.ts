@@ -9,11 +9,11 @@ import {ExchangeRate} from './models/exchangeRate';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  rate: Observable<ExchangeRate>;
+  rate$: Observable<ExchangeRate>;
   constructor(private apiService: ApiService) {
   }
 
   ngOnInit(): void {
-    this.rate = this.apiService.getExchangeRate({base: 'EUR', to: 'PLN'});
+    this.rate$ = this.apiService.getExchangeRate$({base: 'EUR', to: 'PLN'});
   }
 }

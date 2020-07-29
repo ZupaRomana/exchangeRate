@@ -13,7 +13,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getExchangeRate(currencies: Currencies): Observable<ExchangeRate> {
+  getExchangeRate$(currencies: Currencies): Observable<ExchangeRate> {
     return this.http.get(`${environment.apiUrl}/latest?base=${currencies.base}&symbols=${currencies.to}`)
       .pipe(
         map((data: { rates }) => {

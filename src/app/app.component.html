@@ -1,5 +1,5 @@
 <app-nav>
-  <p *ngIf="(rate | async) as rate">
+  <p *ngIf="(rate$ | async) as rate">
     {{ 1 | currency:rate.base:'code' }}
     =
     {{ rate.rate | currency:rate.to:'code' }}
