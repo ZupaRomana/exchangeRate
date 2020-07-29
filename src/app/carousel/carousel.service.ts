@@ -1,7 +1,7 @@
 import {Injectable, OnDestroy} from '@angular/core';
 import {ExchangeRate} from '../models/exchangeRate';
 import {BehaviorSubject, Observable, Subject} from 'rxjs';
-import {currencies} from '../../config/config';
+import {currenciesCarouselItems} from '../../config/config';
 import {ApiService} from '../services/api.service';
 import {takeUntil, tap} from 'rxjs/operators';
 import {CarouselItem} from '../models/carouselItem';
@@ -37,7 +37,7 @@ export class CarouselService implements OnDestroy {
   private emitSubsequentItem(order: 'next' | 'previous'): void {
     const dimensions = getDimensions();
     this.setIndex(order);
-    this.apiService.getExchangeRate$(currencies[this.index]).pipe(
+    this.apiService.getExchangeRate$(currenciesCarouselItems[this.index]).pipe(
       takeUntil(this.unsubscribe$),
       tap((exchangeRate: ExchangeRate) => this.carouselItem$.next({
           ...exchangeRate,
@@ -49,9 +49,9 @@ export class CarouselService implements OnDestroy {
 
   private setIndex(order: 'next' | 'previous'): void {
     if (order === 'next') {
-      this.index + 1 === currencies.length ? this.index = 0 : this.index++;
+      this.index + 1 === currenciesCarouselItems.length ? this.index = 0 : this.index++;
     } else {
-      this.index === 0 ? this.index = currencies.length - 1 : this.index--;
+      this.index === 0 ? this.index = currenciesCarouselItems.length - 1 : this.index--;
     }
   }
 
