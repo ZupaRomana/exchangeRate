@@ -13,12 +13,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
+import { HomeComponent } from './home/home.component';
+import { ChartComponent } from './charts/chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    CarouselComponent
+    CarouselComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
