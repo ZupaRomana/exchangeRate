@@ -9,7 +9,7 @@ import {ExchangeRate} from '../models/exchangeRate';
 @Injectable({
   providedIn: 'root'
 })
-export class ExchangeRateService {
+export class ApiService {
 
   constructor(private http: HttpClient) { }
 
