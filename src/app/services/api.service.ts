@@ -24,4 +24,8 @@ export class ApiService {
         })
       );
   }
+
+  getHistoricalData$(currencies: Currencies): Observable<string> {
+    return this.http.get<string>(`https://api.exchangeratesapi.io/history?start_at=2010-01-01&end_at=2020-09-01&base=${currencies.base}&symbols=${currencies.to}`);
+  }
 }

@@ -5,7 +5,7 @@ import {ChartComponent} from './chart/chart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: ''},
-  { path: 'zloty', component: ChartComponent, data: { chart: 'PLN' }}
+  { path: 'zloty', component: ChartComponent, data: { base: 'EUR', to: 'PLN' }}
 ];
 
 @NgModule({
