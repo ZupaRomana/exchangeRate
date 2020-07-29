@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {Route, RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {ChartComponent} from './chart/chart.component';
+import {LineChartModule} from '@swimlane/ngx-charts';
 
 const routes: Routes = [
   { path: '', redirectTo: ''},
@@ -14,7 +15,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    LineChartModule
   ]
 })
 export class ChartsModule { }
